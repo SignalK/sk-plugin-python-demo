@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+require('./')({
+  debug: () => {},
+  handleMessage: (id, x) => {
+    console.log(`handleMessage:${JSON.stringify(x)}`)
+  }
+}).start({ numberParameterX: 100 })

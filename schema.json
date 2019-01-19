@@ -1,0 +1,38 @@
+{
+  "type": "object",
+  "properties": {
+    "multipleParametersArray": {
+      "type": "array",
+      "title": "Example of multiple repeated parameters",
+      "items": {
+        "type": "object",
+        "required": [
+          "param1",
+          "param2"
+        ],
+        "properties": {
+          "param1": {
+            "type": "string",
+            "title": "Parameter 1",
+            "default": "0.0.0.0"
+          },
+          "param2": {
+            "type": "number",
+            "title": "Parameter 2",
+            "default": 12345
+          }
+        }
+      }
+    },
+    "numberParameterX": {
+      "type": "number",
+      "title": "Param X",
+      "default": 60
+    },
+    "numberParameterY": {
+      "type": "number",
+      "title": "Param Y",
+      "default": 360
+    }
+  }
+}

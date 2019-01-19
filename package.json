@@ -1,0 +1,11 @@
+{
+  "name": "sk-plugin-python-demo",
+  "version": "1.0.0",
+  "description": "Demo Signal K Node server plugin that uses Python",
+  "main": "index.js",
+  "keywords": [
+    "signalk-node-server-plugin"
+  ],
+  "author": "Teppo Kurki <teppo.kurki@iki.fi> (https://github.com/tkurki)",
+  "license": "Apache-2.0"
+}
