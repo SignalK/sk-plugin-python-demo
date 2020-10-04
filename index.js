@@ -11,10 +11,14 @@ module.exports = function (app) {
       child = spawn('python', ['plugin.py'], { cwd: __dirname })
 
       child.stdout.on('data', data => {
-        console.log(JSON.stringify(JSON.parse(data), null, 2))
         // app.debug(data.toString())
         try {
-          app.handleMessage(undefined, JSON.parse(data.toString()))
+          data.toString().split(/\r?\n/).forEach(line => {
+            // console.log(JSON.stringify(line))
+            if (line.length > 0) {
+              app.handleMessage(undefined, JSON.parse(line))
+            }
+          })
         } catch (e) {
           console.error(e.message)
         }

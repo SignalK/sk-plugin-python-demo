@@ -4,7 +4,7 @@ n = 0
 def outputSk():
     global n
     skData = {'updates': [{ 'values': [{'path': 'some.path', 'value': n}]}]}
-    sys.stdout.write(json.dumps(skData))
+    sys.stdout.write(json.dumps(skData) + '\n' + json.dumps(skData))
     sys.stdout.write('\n')
     sys.stdout.flush()
     n += 1
